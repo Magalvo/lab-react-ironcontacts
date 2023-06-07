@@ -1,4 +1,7 @@
 .App {
+  background-color: aliceblue;
+
+  width: 100vw;
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -6,4 +9,27 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+.trr th {
+  margin: 50px;
+  border: 2px solid black;
+}
+
+.contact {
+  background-color: rgb(216, 210, 203);
+}
+
+.but button {
+  margin: 30px;
+}
+
+.head {
+  background-color: aliceblue;
+}
+
+button {
+  padding: 10px;
+  border-style: none;
+  border: 1px solid black;
+  border-radius: 50px;
 }

@@ -62,21 +62,18 @@ function App() {
 
   return (
     <div className='App'>
-      <h2>IronContacts</h2>
-      <div style={{ margin: '20px' }}>
-        {' '}
-        <button onClick={addHandler} style={{ margin: '20px' }}>
-          Add Random Contact
-        </button>
-        <button onClick={sortName} style={{ margin: '20px' }}>
-          Sort By Name
-        </button>
-        <button onClick={sortPopularity}>Sort By Popularity</button>
+      <div className='head'>
+        <h2>IronContacts</h2>
+        <div className='but'>
+          {' '}
+          <button onClick={addHandler}>Add Random Contact</button>
+          <button onClick={sortName}>Sort By Name</button>
+          <button onClick={sortPopularity}>Sort By Popularity</button>
+        </div>
       </div>
-
       <table>
         <thead>
-          <tr style={{ marginLeft: '10px' }}>
+          <tr className='trr'>
             <th>Picture</th>
             <th>Name</th>
             <th>Popularity</th>
@@ -87,16 +84,22 @@ function App() {
         </thead>
         <tbody>
           {slicedArray.map(contact => (
-            <tr key={contact.id}>
-              <td>
+            <tr key={contact.id} className='contact'>
+              <td style={{ width: '20%' }}>
                 {' '}
                 <img
                   src={contact.pictureUrl}
                   alt={contact.name}
-                  style={{ width: '30%', height: '30%' }}
+                  style={{
+                    width: '30%',
+                    height: '100%',
+                    borderRadius: '200px'
+                  }}
                 />{' '}
               </td>
-              <td>{contact.name}</td>
+              <td>
+                <b>{contact.name}</b>
+              </td>
               <td>{contact.popularity}</td>
               <td>{contact.wonOscar && <p>🏆</p>}</td>
               <td>{contact.wonEmmy && <p>🏆</p>}</td>
